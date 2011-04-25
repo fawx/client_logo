@@ -54,7 +54,7 @@
 				$headHeight = 70;
 				$margin = 10;
 				$maxheight = $headHeight-($margin*2);
-				$logoheight = min($maxheight,$size[0]);
+				$logoheight = min($maxheight,$size[1]);
 				//controllo l'esistenza e le misure del logo
 				$page->addElementToHead(new XMLElement("style", "
 					body #wrapper #header {margin-top:0;}
