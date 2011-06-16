@@ -57,10 +57,34 @@
 				$logoheight = min($maxheight,$size[1]);
 				//controllo l'esistenza e le misure del logo
 				$page->addElementToHead(new XMLElement("style", "
-					body #wrapper #header {margin-top:0;}
-					#notice {position:relative; margin:0 -19px;}
-					body #wrapper #header h1 { position:relative; padding:0; height:".$headHeight."px}
-					body #wrapper #header h1 a { display:block; position:absolute; top:".$margin."px; left:19px; height:".$logoheight."px; min-width:".(($logoheight*$props)+2)."px; background: url(" .URL.'/image/1/0/'.$logoheight.'/'.$pathlogo . ") no-repeat; text-indent:-1000px;}
+                    /*
+					body #wrapper #header {
+                        margin-top: 0;
+                    }
+					#notice {
+                        position: relative;
+                        margin: 0;
+                    }
+                    */
+					body #wrapper #header h1 {
+                        position: relative;
+                        padding: 10px 19px;
+                        /* height:".$headHeight."px; */
+                    }
+					body #wrapper #header h1 a {
+                        display: block;
+                        /*
+                        position: absolute;
+                        top:".$margin."px;
+                        left: 19px;
+                        height:".$logoheight."px;
+                        min-width:".(($logoheight*$props)+2)."px;
+                        */
+                        height: " . $size[1] . "px;
+                        background: url(" .URL.'/workspace/'.$pathlogo . ") no-repeat;
+                        text-indent:-1000px;
+                    }
+                    
 					", array("type" => "text/css", "media" => "screen, projection")), 100012);
 				
 				
