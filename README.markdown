@@ -27,7 +27,7 @@ JIT image manipulation extension
 
 1. Just provide an image file path in the "Client logo" field in Symphony's preferences page.
 
-2. By default this extension makes the header 70px high, leaving 10px margin for the logo. If you need to tweak this values, look at lines 55-56 of `extension.driver.php`.
+2. By default this extension makes the header 70px high, leaving 10px margin for the logo. If you need to tweak this, look at lines 60 and 65 of `extension.driver.php`.
 
 
 ## Changelog
