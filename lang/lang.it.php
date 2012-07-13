@@ -22,4 +22,3 @@
 		'Logo del cliente (path relativo rispetto al workspace)'
 
 	);
-	
