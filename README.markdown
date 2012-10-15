@@ -1,10 +1,10 @@
 # Client logo 
 -----------
 
-Version: 1.1.1  
+Version: 1.2  
 Author: Andrea Moretti (nany@bbox.it), Adam Fox (fox@hairb.us)  
-Build Date: 2012-05-03  
-Requirements: Symphony 2.2 or higher
+Build Date: 2012-10-15  
+Requirements: Symphony 2.3 or higher
 
 ## About
 
@@ -31,6 +31,9 @@ JIT image manipulation extension
 
 
 ## Changelog
+
+## 1.2
+ - Added 2.3 compatibility
 
 ### 1.1.1
  - Add extension.meta.xml for use with [symphonyextensions.com](http://symphonyextensions.com)
