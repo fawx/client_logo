@@ -41,7 +41,7 @@
 	
 		//aggiungo il logo
 		public function initaliseAdminPageHead($context) {
-			$page = $context['parent']->Page;
+			$page = Administration::instance()->Page;
 			$pathlogo = General::Sanitize(Administration::Configuration()->get('path', 'client_logo'));						
 			if($pathlogo != "" and file_exists(DOCROOT.'/workspace/'.$pathlogo)) {
 				//controllo l'esistenza e le misure del logo
