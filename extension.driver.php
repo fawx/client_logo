@@ -55,6 +55,7 @@
 						height: 70px;
 						background: url(" .URL.'/image/2/0/70/5/'.$pathlogo . ") no-repeat;
 						text-indent:-1000px;
+						border-bottom: none !important;
 					}",
 					array(
 						"type" => "text/css",
