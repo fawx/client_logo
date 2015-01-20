@@ -16,33 +16,28 @@
 					'delegate'	=> 'InitaliseAdminPageHead',
 					'callback'	=> 'initaliseAdminPageHead'
 				),
-	
 				array(
 					'page' => '/system/preferences/',
 					'delegate' => 'AddCustomPreferenceFieldsets',
 					'callback' => 'appendPreferences'
-				),	
-	
+				),
 				array(
-	
 					'page' => '/system/preferences/',
 					'delegate' => 'Save',
 					'callback' => 'savePreferences'
-	
 				),
 			);
 		}
 	
 		public function uninstall(){
-			Administration::Configuration()->remove('client_logo');			
+			Administration::Configuration()->remove('client_logo');
 			Administration::Configuration()->saveConfig();
 		}
-	
-	
+		
 		//aggiungo il logo
 		public function initaliseAdminPageHead($context) {
 			$page = Administration::instance()->Page;
-			$pathlogo = General::Sanitize(Administration::Configuration()->get('path', 'client_logo'));						
+			$pathlogo = General::Sanitize(Administration::Configuration()->get('path', 'client_logo'));
 			if($pathlogo != "" and file_exists(DOCROOT.'/workspace/'.$pathlogo)) {
 				//controllo l'esistenza e le misure del logo
 				$page->addElementToHead(new XMLElement("style", "
@@ -55,6 +50,7 @@
 						height: 70px;
 						background: url(" .URL.'/image/2/0/70/5/'.$pathlogo . ") no-repeat;
 						text-indent:-1000px;
+						border-bottom: none !important;
 					}",
 					array(
 						"type" => "text/css",
@@ -81,15 +77,15 @@
 			$group->appendChild(
 				new XMLElement('legend', 'Client logo')
 			);
-	
+			
 			$pathlogo = Widget::Label(__('Client logo path (relative to workspace)'));
 			$pathlogo->appendChild(Widget::Input(
 				'settings[client_logo][path]', General::Sanitize(Administration::Configuration()->get('path', 'client_logo'))
 			));
 			$group->appendChild($pathlogo);
-	
-			$context['wrapper']->appendChild($group);			
-	
+			
+			$context['wrapper']->appendChild($group);
+			
 		}
 	
 	}
